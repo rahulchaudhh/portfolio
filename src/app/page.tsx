@@ -126,7 +126,7 @@ export default function Home() {
         {/* Top Tagline Text — Remains fixed near top */}
         <div className="relative z-10 pt-6 md:pt-8">
           <span className="text-[18px] md:text-[20px] font-normal text-white/95 tracking-tight drop-shadow-md">
-            0% Time Wasted · Available May 2026
+            0% Time Wasted · Available Oct 2026
           </span>
         </div>
 
@@ -148,22 +148,20 @@ export default function Home() {
             <a
               href="#contact"
               onClick={() => setActiveCta('hire')}
-              className={`inline-flex items-center justify-center text-[14px] font-medium rounded-[4px] w-[200px] min-h-[40px] px-4 transition-all shadow-lg ${
-                activeCta === 'hire'
+              className={`inline-flex items-center justify-center text-[14px] font-medium rounded-[4px] w-[200px] min-h-[40px] px-4 transition-all shadow-lg ${activeCta === 'hire'
                   ? 'bg-[#3E6AE1] text-white hover:bg-[#3459c4]'
                   : 'bg-white/10 backdrop-blur-md text-white border border-white/40 hover:bg-white hover:text-[#171A20]'
-              }`}
+                }`}
             >
               Hire Me
             </a>
             <a
               href="#work"
               onClick={() => setActiveCta('portfolio')}
-              className={`inline-flex items-center justify-center text-[14px] font-medium rounded-[4px] w-[200px] min-h-[40px] px-4 transition-all shadow-lg ${
-                activeCta === 'portfolio'
+              className={`inline-flex items-center justify-center text-[14px] font-medium rounded-[4px] w-[200px] min-h-[40px] px-4 transition-all shadow-lg ${activeCta === 'portfolio'
                   ? 'bg-[#3E6AE1] text-white hover:bg-[#3459c4]'
                   : 'bg-white/10 backdrop-blur-md text-white border border-white/40 hover:bg-white hover:text-[#171A20]'
-              }`}
+                }`}
             >
               View Portfolio
             </a>
@@ -205,7 +203,7 @@ export default function Home() {
                       Degree
                     </div>
                     <div className="mt-2 text-[20px] md:text-[22px] font-medium text-[#171A20]">
-                    BSc (Hons) Computing with Artificial Intelligence
+                      BSc (Hons) Computing with Artificial Intelligence
                     </div>
                   </div>
                   <div className="p-5 bg-white">
@@ -290,32 +288,32 @@ export default function Home() {
 
               {/* Card 2 */}
               {/* Card 2: Review Extraction Pipeline */}
-<a
-  href="https://review-extraction-pipeline.streamlit.app/"
-  target="_blank"
-  rel="noreferrer"
-  className="group relative block w-full aspect-[16/10] overflow-hidden rounded-[12px] bg-[#F4F4F4] cursor-pointer"
->
-  <img
-     src="/images/projects/p2.png"
-    
-    // src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=85" //
-    alt="Review Extraction Pipeline"
-    className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-  <div className="absolute top-5 left-5 text-white text-[12px] font-medium uppercase tracking-widest text-white/80">
-    LangChain · Groq · FastAPI · Streamlit ↗
-  </div>
-  <div className="absolute bottom-6 left-6 right-6 text-white">
-    <h3 className="text-[22px] md:text-[26px] font-medium leading-[1.2]">
-      Review Extraction Pipeline
-    </h3>
-    <p className="mt-1 text-[14px] text-white/85">
-      Automated sentiment & theme extraction from user feedback into structured JSON with real-time Streamlit dashboard visualization.
-    </p>
-  </div>
-</a>
+              <a
+                href="https://review-extraction-pipeline.streamlit.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="group relative block w-full aspect-[16/10] overflow-hidden rounded-[12px] bg-[#F4F4F4] cursor-pointer"
+              >
+                <img
+                  src="/images/projects/p2.png"
+
+                  // src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=85" //
+                  alt="Review Extraction Pipeline"
+                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute top-5 left-5 text-white text-[12px] font-medium uppercase tracking-widest text-white/80">
+                  LangChain · Groq · FastAPI · Streamlit ↗
+                </div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-[22px] md:text-[26px] font-medium leading-[1.2]">
+                    Review Extraction Pipeline
+                  </h3>
+                  <p className="mt-1 text-[14px] text-white/85">
+                    Automated sentiment & theme extraction from user feedback into structured JSON with real-time Streamlit dashboard visualization.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </section>
@@ -328,7 +326,7 @@ export default function Home() {
               Stack, languages, and instruments.
             </h2>
 
-        
+
 
             {/* 4-Column Grid */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#EEEEEE] rounded-[4px] overflow-hidden">
@@ -337,7 +335,7 @@ export default function Home() {
                   Engineering
                 </div>
                 <ul className="mt-5 space-y-2.5">
-                  {['Python', 'JavaScript', 'FastAPI', 'Node.js', 'React.js', 'PostgreSQL', 'Redis']
+                  {['Python', 'JavaScript', 'FastAPI', 'React.js', 'PostgreSQL', 'Redis']
                     .filter((item) => item.toLowerCase().includes(skillFilter.toLowerCase()))
                     .map((item, idx) => (
                       <li key={idx} className="text-[15px] font-medium text-[#171A20]">{item}</li>
@@ -350,7 +348,7 @@ export default function Home() {
                   AI / Research
                 </div>
                 <ul className="mt-5 space-y-2.5">
-                  {['Generative AI & LLMs', 'PyTorch', 'LangChain', 'Claude 3 API', 'RAG Pipelines', 'Pinecone & FAISS', 'Deep Learning', 'Computer Vision', 'NLP']
+                  {['Generative AI & LLMs', 'PyTorch', 'LangChain', 'Claude 3 API', 'Ollama', 'RAG Pipelines', 'Embeddings']
                     .filter((item) => item.toLowerCase().includes(skillFilter.toLowerCase()))
                     .map((item, idx) => (
                       <li key={idx} className="text-[15px] font-medium text-[#171A20]">{item}</li>
@@ -363,7 +361,7 @@ export default function Home() {
                   Cloud & Tools
                 </div>
                 <ul className="mt-5 space-y-2.5">
-                  {['AWS (EC2)', 'Docker', 'Nginx & Certbot', 'n8n Workflow', 'VS Code', 'Jupyter Notebooks']
+                  {['AWS (EC2)', 'Docker', 'Nginx & Certbot', 'n8n Workflow']
                     .filter((item) => item.toLowerCase().includes(skillFilter.toLowerCase()))
                     .map((item, idx) => (
                       <li key={idx} className="text-[15px] font-medium text-[#171A20]">{item}</li>
@@ -373,10 +371,10 @@ export default function Home() {
 
               <div className="p-7 bg-white">
                 <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#5C5E62]">
-                  Languages & Education
+                  Languages
                 </div>
                 <ul className="mt-5 space-y-2.5">
-                  {['English (Fluent)', 'Nepali (Native)', 'BSc (Hons) AI', 'Islington College']
+                  {['English', 'Nepali', 'Hindi']
                     .filter((item) => item.toLowerCase().includes(skillFilter.toLowerCase()))
                     .map((item, idx) => (
                       <li key={idx} className="text-[15px] font-medium text-[#171A20]">{item}</li>
