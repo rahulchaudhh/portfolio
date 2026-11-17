@@ -1,0 +1,64 @@
+name: Prepare Cloudflare Workers migration
+
+on:
+  push:
+    branches:
+      - cloudflare-vinext-migration
+    paths:
+      - .github/workflows/cloudflare-vinext-migration.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/cloudflare-vinext-migration.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cloudflare-vinext-migration
+  cancel-in-progress: false
+
+jobs:
+  migrate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out migration branch
+        uses: actions/checkout@v4
+        with:
+          ref: cloudflare-vinext-migration
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install existing dependencies
+        run: npm ci
+
+      - name: Run vinext compatibility check and non-destructive Cloudflare setup
+        run: >-
+          npx --yes vinext init
+          --platform=cloudflare
+          --cdn-cache=none
+          --data-cache=none
+          --image-optimization=none
+          --no-prerender
+          --name=rahulchaudhary-portfolio
+
+      - name: Build the application for Cloudflare
+        run: npm run build:vinext
+
+      - name: Commit generated Cloudflare configuration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "chore: prepare Next.js app for Cloudflare Workers"
+            git push origin HEAD:cloudflare-vinext-migration
+          fi
