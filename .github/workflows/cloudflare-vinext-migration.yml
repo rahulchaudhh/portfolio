@@ -6,6 +6,11 @@ on:
       - cloudflare-vinext-migration
     paths:
       - .github/workflows/cloudflare-vinext-migration.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/cloudflare-vinext-migration.yml
 
 permissions:
   contents: write
